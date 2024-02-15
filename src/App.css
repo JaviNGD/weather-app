@@ -10,101 +10,101 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
 }
 
 h1 {
-  font-family: "Poppins";
-  font-size: 3em;
+    font-family: "Poppins";
+    font-size: 3em;
+    color: white;
 }
 
 .container {
-  width: 407px;
-  height: 555px;
-  margin: auto;
-  margin-top: 25px;
-  border-radius: 12px;
-  background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
+    width: 407px;
+    height: 500px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 12px;
+    background-image: linear-gradient(180deg, #f3f5f6 0%, #95e1f6 100%);
 }
 
 .top-bar {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .top-bar input {
-  display: flex;
-  width: 242px;
-  height: 52px;
-  background: #ebfffc;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  padding-left: 40px;
-  color: #626262;
-  font-size: 20px;
-  font-weight: 400;
+    display: flex;
+    width: 242px;
+    height: 42px;
+    background: #ebfffc;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 40px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .search-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 52px;
-  height: 52px;
-  background: #ebfffc;
-  border-radius: 50%;
-  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: #ebfffc;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .weather-image {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .weather-temp {
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-  font-weight: 400;
-  color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 500;
+    color: #000;
 }
 
 .weather-location {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 400;
-  color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
 }
 
 .data-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
-  color: white; 
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    color: #000;
 }
 
 .element {
-  display: flex;
-  margin: auto;
-  align-items: flex-start;
-  gap: 12px;
+    display: flex;
+    margin: auto;
+    align-items: flex-start;
+    gap: 12px;
 }
 
 .data {
-  font-size: 20px;
-  font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .text {
-  font-size: 15px;
-  font-weight: 400;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .icon {
-  margin-top: 10px;
+    margin-top: 10px;
 }

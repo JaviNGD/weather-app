@@ -10,7 +10,6 @@ import rain_icon from "../Assets/rain.png";
 import snow_icon from "../Assets/snow.png";
 import wind_icon from "../Assets/wind.png";
 
-
 const WeatherApp = () => {
 
     // API KEY for OpenWeatherMap
@@ -28,6 +27,12 @@ const WeatherApp = () => {
             return 0;
         }
 
+        // Check if the input is a number
+        if (!isNaN(cityElement[0].value)) {
+            alert("Please enter a valid city name");
+            return 0;
+        }
+
         // Create the URL for the API
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityElement[0].value}&units=Metric&appid=${API_KEY}`;
 
@@ -36,6 +41,12 @@ const WeatherApp = () => {
 
         // Convert the response to JSON
         let data = await response.json();
+
+        // Check if the city exists
+        if (data.cod === "404") {
+            alert("City not found");
+            return 0;
+        }
 
         const humidity = document.getElementsByClassName("humidity-percent");   
         const wind = document.getElementsByClassName("wind-speed");
@@ -48,7 +59,7 @@ const WeatherApp = () => {
         temp[0].innerHTML = (data.main.temp).toFixed() + "°C";
         location[0].innerHTML = data.name;
 
-        // Set the weather icon
+        // Set weather icons
         if (data.weather[0].icon === "01d" || data.weather[0].icon === "01n") {
             SetWIcon(clear_icon);
         } else if (data.weather[0].icon === "02d" || data.weather[0].icon === "02n") {
@@ -72,13 +83,13 @@ const WeatherApp = () => {
     return (
         <div className="weather-app">
             <h1>Weather App</h1>
-            <div className="container">
-                <div className="top-bar">
+            <div className="top-bar">
                     <input type="text" className="cityInput" placeholder="Search..." />
                     <div className="search-icon" onClick={()=>{search()}}>
                         <img src={search_icon} alt="" />
                     </div>
-                </div>
+            </div>
+            <div className="container">
                 <div className="weather-image">
                     <img src={wIcon} alt="" />
                 </div>
