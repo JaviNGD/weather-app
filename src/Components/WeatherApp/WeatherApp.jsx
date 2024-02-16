@@ -57,7 +57,7 @@ const WeatherApp = () => {
         humidity[0].innerHTML = data.main.humidity + "%";
         wind[0].innerHTML = data.wind.speed + " km/h";
         temp[0].innerHTML = (data.main.temp).toFixed() + "°C";
-        location[0].innerHTML = data.name;
+        location[0].innerHTML = data.name + `, ${data.sys.country}.`;
 
         // Set weather icons
         if (data.weather[0].icon === "01d" || data.weather[0].icon === "01n") {
@@ -77,7 +77,6 @@ const WeatherApp = () => {
         } else {
             SetWIcon(clear_icon);
         }
-
     }
 
     return (
