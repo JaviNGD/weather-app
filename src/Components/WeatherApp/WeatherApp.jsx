@@ -83,7 +83,12 @@ const WeatherApp = () => {
         <div className="weather-app">
             <h1>Weather App</h1>
             <div className="top-bar">
-                    <input type="text" className="cityInput" placeholder="Search..." />
+                    <input 
+                        type="text" 
+                        className="cityInput" 
+                        placeholder="Search..." 
+                        onKeyUp={e => e.key === 'Enter' && search()}
+                    />
                     <div className="search-icon" onClick={()=>{search()}}>
                         <img src={search_icon} alt="" />
                     </div>
