@@ -1,6 +1,6 @@
 # Weather App ⛅
 
-React-based Weather App Application.
+React-based Weather App Application, using OpenWeatherMapAPI.
 
 ## Demo
 
@@ -15,7 +15,7 @@ git clone https://github.com/JaviNGD/weather-app.git
 
 Go to the project directory
 ```plaintext
-cd shopping-list-react
+cd weather-app
 ```
 
 Install dependencies
